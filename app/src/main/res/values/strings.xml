@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Digital Clock</string>
+
+    <string-array name="time_formats">
+        <item>24-Hour Format</item>
+        <item>12-Hour Format (AM/PM)</item>
+    </string-array>
+
+    <string-array name="sort_options">
+        <item>Name</item>
+        <item>Time Offset (UTC)</item>
+        <item>Alphabetical</item>
+    </string-array>
+</resources>
