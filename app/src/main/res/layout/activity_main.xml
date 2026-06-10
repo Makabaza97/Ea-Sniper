@@ -7,7 +7,7 @@
     android:background="#f5f5f5">
 
     <!-- Current Time Display -->
-    <CardView xmlns:card="http://schemas.android.com/apk/res-auto"
+    <androidx.cardview.widget.CardView xmlns:card="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
@@ -42,7 +42,60 @@
 
         </LinearLayout>
 
-    </CardView>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Format and Sort Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time Format"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:layout_marginBottom="4dp" />
+
+            <Spinner
+                android:id="@+id/formatSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sort By"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:layout_marginBottom="4dp" />
+
+            <Spinner
+                android:id="@+id/sortSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <!-- Add Timezone Section -->
     <LinearLayout
@@ -61,16 +114,25 @@
             android:paddingEnd="12dp"
             android:background="@drawable/edit_text_background"
             android:textColorHint="#999999"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:layout_marginEnd="8dp" />
 
         <Button
             android:id="@+id/addTimeZoneButton"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:text="Add"
-            android:layout_marginStart="8dp"
             android:textColor="#ffffff"
-            android:backgroundTint="#1976d2" />
+            android:backgroundTint="#1976d2"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/searchTimeZonesButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Search"
+            android:textColor="#ffffff"
+            android:backgroundTint="#4caf50" />
 
     </LinearLayout>
 
